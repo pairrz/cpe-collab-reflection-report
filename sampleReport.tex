@@ -2,7 +2,8 @@
 %% Build the final copy without editing this file:
 %%   xelatex -jobname=sampleReport-final "\def\reportmode{final}\input{sampleReport}"
 \providecommand\reportmode{semifinal}
-\documentclass[\reportmode]{cpecmu}
+%% เล่มรายงานวิชาสำรวจเพื่อโครงงาน จัดรูปแบบตามเล่ม LEAP 2568/1
+\documentclass[\reportmode,survey]{cpecmu}
 
 %% This is a sample document demonstrating how to use the CPECMU
 %% project template. If you are having trouble, see "cpecmu.pdf" for
@@ -97,7 +98,6 @@
 
 \bibliography{sampleReport}
 
-\ifproject
 \normalspacing
 \appendix
 \include{chapters/appendix-interview}
@@ -108,5 +108,4 @@
 %% Display index (optional) -- need idx option.
 \ifindex\indexpage\fi
 
-\fi % \ifproject
 \end{document}
