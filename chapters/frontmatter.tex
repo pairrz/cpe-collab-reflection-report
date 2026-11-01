@@ -3,23 +3,19 @@
 
 \ifproject
 \begin{abstractTH}
-เขียนบทคัดย่อของโครงงานที่นี่
+Peer review คือการประเมินตนเองและประเมินเพื่อนในกลุ่ม ซึ่งเป็นกระบวนการสะท้อนคิดที่ช่วยให้ผู้เรียนเห็นจุดแข็งและจุดที่ควรพัฒนาของตนเอง ผ่านข้อเสนอแนะจากตนเอง เพื่อนร่วมกลุ่ม และอาจารย์ผู้สอน โดยการให้ข้อเสนอแนะเป็นกลไกสำคัญที่ผู้เรียนนำไปใช้พัฒนาการเรียนรู้และการทำงานร่วมกับผู้อื่นของตนเอง
 
-การเขียนรายงานเป็นส่วนหนึ่งของการทำโครงงานวิศวกรรมคอมพิวเตอร์
-เพื่อทบทวนทฤษฎีที่เกี่ยวข้อง อธิบายขั้นตอนวิธีแก้ปัญหาเชิงวิศวกรรม และวิเคราะห์และสรุปผลการทดลองอุปกรณ์และระบบต่างๆ
-\enskip อย่างไรก็ดี การสร้างรูปเล่มรายงานให้ถูกรูปแบบนั้นเป็นขั้นตอนที่ยุ่งยาก
-แม้ว่าจะมีต้นแบบสำหรับใช้ในโปรแกรม Microsoft Word แล้วก็ตาม
-แต่นักศึกษาส่วนใหญ่ยังคงค้นพบว่าการใช้งานมีความซับซ้อน และเกิดความผิดพลาดในการจัดรูปแบบ กำหนดเลขหัวข้อ และสร้างสารบัญอยู่
-\enskip ภาควิชาวิศวกรรมคอมพิวเตอร์จึงได้จัดทำต้นแบบรูปเล่มรายงานโดยใช้ระบบจัดเตรียมเอกสาร
-\LaTeX{} เพื่อช่วยให้นักศึกษาเขียนรายงานได้อย่างสะดวกและรวดเร็วมากยิ่งขึ้น
+ในปัจจุบัน การให้ข้อเสนอแนะในรายวิชาที่มีนักศึกษาจำนวนมากและมีการทำงานกลุ่มนั้นมีความยุ่งยาก เนื่องจากอาจารย์ผู้สอน (Instructor) ต้องอ่านผลประเมินทั้งหมด คัดแยกประเด็น และเขียนข้อเสนอแนะเฉพาะบุคคลให้นักศึกษาแต่ละคน ซึ่งเป็นภาระที่ใช้เวลามากและทำให้ไม่สามารถให้ข้อเสนอแนะได้อย่างทั่วถึง นอกจากนี้ ถ้อยคำในการประเมินเพื่อนบางครั้งอาจไม่เหมาะสม ทำให้ผู้รับข้อเสนอแนะไม่สามารถนำไปพัฒนาตนเองได้อย่างเต็มที่
+
+คณะผู้จัดทำจึงได้จัดทำโครงงานเพื่อพัฒนาเว็บแอปพลิเคชัน Collab Reflection ที่ผสานเทคโนโลยีปัญญาประดิษฐ์ (AI) เข้า กับ Web Application ซึ่งสามารถให้นักศึกษาประเมินตนเองและประเมินเพื่อนในกลุ่มได้ และสามารถให้อาจารย์ดูผลการประเมินที่ถูกจำแนกประเภทผ่านแดชบอร์ดได้ โดยระบบในระยะที่ 1 ประกอบด้วย แบบประเมินตนเอง แบบประเมินเพื่อนในกลุ่ม และแดชบอร์ดสำหรับอาจารย์ ส่วนระยะที่ 2 จะเพิ่มระบบ AI ที่ช่วยตรวจโทนข้อความและเสนอถ้อยคำเชิงสร้างสรรค์ให้ผู้เขียนเลือกใช้ รวมถึง AI ที่สรุปผลเพื่อช่วยอาจารย์ร่างข้อเสนอแนะตอบกลับนักศึกษา โดยอาจารย์ยังเป็นผู้ตรวจทานก่อนส่งทุกครั้ง
 \end{abstractTH}
 
 \begin{abstract}
-The abstract would be placed here. It usually does not exceed 350 words
-long (not counting the heading), and must not take up more than one (1) page
-(even if fewer than 350 words long).
+Peer review is a process of self-assessment and peer assessment within a group. It is a reflective practice that helps learners recognize their own strengths and areas for improvement through feedback from themselves, their teammates, and their instructors. Feedback serves as a key mechanism that learners use to improve their learning and their collaboration with others.
 
-Make sure your abstract sits inside the \texttt{abstract} environment.
+At present, providing feedback in courses with large numbers of students and group work is challenging. Instructors must read all of the evaluation results, categorize the issues, and write individualized feedback for each student. This is a time-consuming burden that prevents instructors from giving feedback to every student. In addition, the wording of peer evaluations is sometimes inappropriate, which prevents recipients from fully using the feedback to improve themselves.
+
+Therefore, the project team developed Collab Reflection, a web application that integrates artificial intelligence (AI) technology with a web platform. The system allows students to evaluate themselves and their teammates, and allows instructors to view categorized evaluation results through a dashboard. Phase 1 of the system consists of a self-assessment form, a peer assessment form, and an instructor dashboard. Phase 2 will add an AI system that checks the tone of written comments and suggests constructive wording for the writer to choose from, as well as an AI that summarizes results to help instructors draft feedback responses to students. The instructor remains the reviewer before every message is sent.
 \end{abstract}
 
 \iffalse
@@ -31,10 +27,19 @@ Dedication page is optional.
 \fi % \iffalse
 
 \begin{acknowledgments}
-Your acknowledgments go here. Make sure it sits inside the
-\texttt{acknowledgment} environment.
+โครงงานแพลตฟอร์มประเมินตนเองและเพื่อนในกลุ่มเพื่อการพัฒนาตนเอง Collab Reflection สำเร็จลุล่วงไปได้ด้วยความกรุณาอย่างยิ่งจาก ผศ.ดร.ธนาทิพย์ จันทร์คง อาจารย์ที่ปรึกษา ที่ให้คำแนะนำ ข้อเสนอแนะ และการสนับสนุนทางวิชาการอย่างใกล้ชิดตลอดระยะเวลาการดำเนินโครงงาน รวมถึงชี้แนะแนวทางในการพัฒนาและปรับปรุงระบบให้มีประสิทธิภาพและเหมาะสมต่อการใช้งานจริง
 
-\acksign{2020}{5}{25}
+ขอกราบขอบพระคุณ ผศ.ดร.พฤษภ์ บุญมา อ.ดร.อานันท์ สีห์พิทักษ์เกียรติ และ ผศ.ดร.สาลินี สันติธีรากุล คณะกรรมการสอบ ที่กรุณาให้คำแนะนำ ข้อคิดเห็น และข้อเสนอแนะอันเป็นประโยชน์ต่อโครงงาน
+
+ขอขอบคุณภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่ ที่ให้ความรู้พื้นฐานทางวิชาการ ตลอดจนสนับสนุนทรัพยากร สถานที่ และอุปกรณ์ที่จำเป็นต่อการทำโครงงาน ทำให้คณะผู้จัดทำสามารถนำความรู้ที่ได้ศึกษามาประยุกต์ใช้พัฒนาระบบได้จริง
+
+ขอขอบคุณเพื่อนร่วมทีมทุกคนที่ร่วมแรงร่วมใจกันในการออกแบบ พัฒนา และทดสอบระบบ ทั้งในช่วงที่งานดำเนินไปได้ด้วยดีและในช่วงที่พบอุปสรรค สมาชิกทุกคนช่วยเหลือ แลกเปลี่ยนความคิดเห็น และรับผิดชอบหน้าที่ของตนอย่างเต็มกำลัง จนโครงงานสำเร็จลุล่วงตามเป้าหมาย
+
+ขอขอบคุณเพื่อนนักศึกษาและผู้ที่เกี่ยวข้อง ที่สละเวลาร่วมทดลองใช้งานระบบและให้ข้อเสนอแนะ ซึ่งเป็นประโยชน์ต่อการปรับปรุงระบบให้ตรงกับความต้องการของผู้ใช้มากยิ่งขึ้น
+
+สุดท้ายนี้ ขอขอบคุณครอบครัวและผู้มีส่วนเกี่ยวข้องทุกท่าน ที่ให้การสนับสนุน กำลังใจ และความเข้าใจตลอดระยะเวลาการดำเนินโครงงาน คณะผู้จัดทำขอขอบพระคุณทุกท่านมา ณ โอกาสนี้
+
+\acksign{2026}{10}{25}
 \end{acknowledgments}%
 \fi % \ifproject
 

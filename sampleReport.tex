@@ -1,21 +1,30 @@
-\documentclass[semifinal]{cpecmu}
+%% semifinal marks overfull lines with black rules; final is the copy for submission.
+%% Build the final copy without editing this file:
+%%   xelatex -jobname=sampleReport-final "\def\reportmode{final}\input{sampleReport}"
+\providecommand\reportmode{semifinal}
+\documentclass[\reportmode]{cpecmu}
 
 %% This is a sample document demonstrating how to use the CPECMU
 %% project template. If you are having trouble, see "cpecmu.pdf" for
 %% documentation.
 
-\projectNo{P069-1}
-\acadyear{2021}
+\projectNo{??}            % เลขโครงงาน ใน Doc ยังเป็น xx.xx รอทีมยืนยัน
+\acadyear{2026}
 
-\titleTH{โครงงานสุดเลิฟของฉัน}
-\titleEN{Your Project Name Goes Here}
+%% ชื่อระบบ Collab Reflection เป็นชื่อรอง ใช้ \newline เพราะชื่อโครงงานถูกวางในเซลล์ตารางด้วย
+\titleTH{แพลตฟอร์มประเมินตนเองและเพื่อนในกลุ่มเพื่อการพัฒนาตนเอง\newline Collab Reflection}
+\titleEN{Self and Peer Evaluation Platform for Personal Development\newline Collab Reflection}
 
-\author{นายกินรี ไทร์ล้ำเลิศ}{Kinnaree Tirelumlert}{690610696}
-\author{นายบรรจบ พบเอฟตลอด}{Banjob Pob-eftalord}{690610969}
+\author{นางสาวดารารัตน์ บัวยิ้ม}{Dararat Buayim}{660610759}
+\author{นางสาวบัวชมพู ฤกษ์สุทธิรัตน์}{Buachompoo Rerksuitthirat}{660610768}
+\author{นายปฏิพันธ์ เลขนอก}{Patiphan Leknok}{660610771}
+\author{นายรัชชานนท์ ไชยวงค์}{Ratchanon Chaiwong}{660610789}
 
-\cpeadvisor{chinawat}
-\cpecommittee{paskorn}
-\committee{รศ.ดร.\,นิพนธ์ ธีรอำพน}{Assoc.\,Prof.\,Nipon Theera-Umpon, Ph.D.}
+\cpeadvisor{thanatip}
+\cpecommittee{pruet}
+\cpecommittee{arnan}
+%% ชื่อภาษาอังกฤษยังไม่ได้ตรวจกับรายชื่อของภาค
+\committee{ผศ.ดร.\,สาลินี สันติธีรากุล}{Asst.\,Prof.\,Salinee Santiteerakul, Ph.D.}
 
 %% Some possible packages to include:
 \usepackage[final]{graphicx} % for including graphics
@@ -28,6 +37,11 @@
 %% Needed just by this example, but maybe not by most reports
 \usepackage{afterpage} % for outputting
 \usepackage{pdflscape} % for landscape figures and tables. 
+\usepackage{capt-of}   % caption for the plan (Gantt chart) table in chapter 1
+
+%% Column types shared by the tables in chapters 2 and 3
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 %% Some other useful packages. Look these up to find out how to use
 %% them.
@@ -42,6 +56,8 @@
 %% if you're having problems with overfull boxes, you may need to increase
 %% the tolerance to 9999
 % \tolerance=9999
+%% Thai text has few break points; allow extra stretch so lines do not run into the margin
+\setlength{\emergencystretch}{2em}
 
 \bibliographystyle{plain}
 % \bibliographystyle{IEEEbib}
@@ -77,17 +93,13 @@
 \include{chapters/intro}
 \include{chapters/background}
 \include{chapters/approach}
-\include{chapters/eval}
-\ifproject
-\include{chapters/conclusion}
-\fi
 
 \bibliography{sampleReport}
 
 \ifproject
 \normalspacing
 \appendix
-\include{chapters/appendix}
+\include{chapters/appendix-interview}
 
 %% Display glossary (optional) -- need glossary option.
 \ifglossary\glossarypage\fi
@@ -95,12 +107,5 @@
 %% Display index (optional) -- need idx option.
 \ifindex\indexpage\fi
 
-\begin{biosketch}
-\begin{center}
-  \includegraphics[width=1.5in]{mugshot.jpg}
-\end{center}
-Your biosketch goes here. Make sure it sits inside
-the \texttt{biosketch} environment.
-\end{biosketch}
 \fi % \ifproject
 \end{document}

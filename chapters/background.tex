@@ -1,128 +1,107 @@
-\chapter{\ifenglish Background Knowledge and Theory\else ทฤษฎีที่เกี่ยวข้อง\fi}
+% บทที่ 2 ทฤษฎีที่เกี่ยวข้อง
+% ถอดจาก ch2_related_theory.pdf ของทีม รายการอ้างอิงท้ายบทย้ายไปไว้ใน sampleReport.bib
+\chapter{\ifenglish Background Knowledge and Theory\else ทฤษฎีที่เกี่ยวข้อง\fi}\label{ch:background}
 
-การทำโครงงาน เริ่มต้นด้วยการศึกษาค้นคว้า ทฤษฎีที่เกี่ยวข้อง หรือ งานวิจัย/โครงงาน ที่เคยมีผู้นำเสนอไว้แล้ว ซึ่งเนื้อหาในบทนี้ก็จะเกี่ยวกับการอธิบายถึงสิ่งที่เกี่ยวข้องกับโครงงาน เพื่อให้ผู้อ่านเข้าใจเนื้อหาในบทถัดๆ ไปได้ง่ายขึ้น
+โครงงาน Collab.Reflection เป็นเว็บแอปพลิเคชันสำหรับการสะท้อนคิดและการประเมินเพื่อนร่วมทีม (Team Collaboration Reflection \& Peer Review) เพื่อให้ผู้สอนมองเห็นพลวัตของการทำงานกลุ่มของนักศึกษาในรายวิชาที่มีนักศึกษาจำนวนมากได้ชัดเจนขึ้น บทนี้อธิบายแนวคิดและทฤษฎีที่ใช้เป็นฐานในการออกแบบระบบ ได้แก่ การเรียนรู้แบบร่วมมือ ปัญหาของการทำงานกลุ่ม การประเมินโดยเพื่อนและระบบที่มีอยู่เดิม การสะท้อนคิด และเกณฑ์การประเมิน CATME ที่โครงงานเลือกใช้ ตลอดจนความรู้ทางวิศวกรรมคอมพิวเตอร์ทั้งในและนอกหลักสูตรที่นำมาบูรณาการ
 
-\section{The first section}
-The text for Section 1 goes here.
+\section{การทำงานกลุ่มและการเรียนรู้แบบร่วมมือ}
 
-\section{Second section}
-Section 2 text.
+การเรียนรู้แบบร่วมมือ (Cooperative Learning) คือการจัดให้ผู้เรียนทำงานร่วมกันเป็นกลุ่มเล็กเพื่อบรรลุเป้าหมายร่วม โดยสมาชิกแต่ละคนต้องพึ่งพากันและกัน~\cite{johnson1998active} องค์ประกอบสำคัญได้แก่ การพึ่งพากันในเชิงบวก ความรับผิดชอบรายบุคคล การปฏิสัมพันธ์แบบเผชิญหน้า ทักษะทางสังคม และการประมวลผลกระบวนการกลุ่ม
 
-\subsection{Subsection heading goes here}
+องค์ประกอบ ``ความรับผิดชอบรายบุคคล'' และ ``การประมวลผลกระบวนการกลุ่ม'' เป็นจุดที่ผู้สอนมักมองเห็นได้ยาก เพราะผู้สอนมักเห็นเพียงผลงานสุดท้าย ไม่เห็นพฤติกรรมของสมาชิกนอกห้องเรียน ซึ่งเป็นช่องว่างที่ Collab.Reflection ต้องการเติมเต็ม
 
-Subsection 1 text
+\subsection{ขั้นตอนพัฒนาการของกลุ่ม}
 
-\subsubsection{Subsubsection 1 heading goes here}
-Subsubsection 1 text
+Tuckman~\cite{tuckman1965developmental} อธิบายว่ากลุ่มมักผ่านขั้นตอน Forming, Storming, Norming และ Performing ในช่วง Storming มักเกิดความขัดแย้งและความไม่ลงรอยของบทบาท การให้สมาชิกตกลงกติการ่วมกันตั้งแต่ต้น (ข้อตกลงกลุ่ม) จึงช่วยลดความขัดแย้งในระยะถัดไป ซึ่งสอดคล้องกับขั้นตอนเลือกกลุ่มและรับข้อตกลงของระบบ
 
-\subsubsection{Subsubsection 2 heading goes here}
-Subsubsection 2 text
+\section{ปัญหาที่พบในการทำงานกลุ่ม}
 
-\section{Third section}
-Section 3 text. The dielectric constant\index{dielectric constant}
-at the air-metal interface determines
-the resonance shift\index{resonance shift} as absorption or capture occurs
-is shown in Equation~\eqref{eq:dielectric}:
+\subsection{Social Loafing และ Free-rider}
 
-\begin{equation}\label{eq:dielectric}
-k_1=\frac{\omega}{c({1/\varepsilon_m + 1/\varepsilon_i})^{1/2}}=k_2=\frac{\omega
-\sin(\theta)\varepsilon_\mathit{air}^{1/2}}{c}
-\end{equation}
+Social Loafing คือปรากฏการณ์ที่บุคคลลดความพยายามลงเมื่อทำงานเป็นกลุ่มเมื่อเทียบกับทำงานคนเดียว~\cite{latane1979many} เมื่อให้คะแนนกลุ่มเท่ากันทุกคน ผู้ที่ทำน้อยอาจได้คะแนนเท่าผู้ที่ทำมาก เกิดภาวะ Free-rider และผู้ที่ต้องแบกงานแทน ซึ่งเป็นปัญหาเรื้อรังที่อาจารย์ผู้ให้สัมภาษณ์ของโครงงานกล่าวถึงตรงกัน
+
+\subsection{ข้อจำกัดด้านอัตราส่วนผู้สอนต่อนักศึกษา}
+
+ในรายวิชาที่มีนักศึกษาจำนวนมาก (ตัวอย่างในโครงงานคืออัตราส่วนประมาณ 90\,:\,1) ผู้สอนเข้าถึงนักศึกษารายบุคคลได้ยาก ขาดช่องทางรับทราบปัญหาและให้ข้อมูลย้อนกลับเชิงบวกอย่างต่อเนื่อง ข้อมูลการสะท้อนคิดที่เก็บได้จึงถูกนำไปใช้ได้ไม่เต็มที่ การสื่อสารที่คลาดเคลื่อนและการให้ข้อมูลย้อนกลับด้วยอารมณ์ก็เป็นปัญหาที่พบร่วมกัน
+
+\section{การประเมินโดยเพื่อนร่วมกลุ่มและระบบที่เกี่ยวข้อง}
+
+\subsection{การประเมินโดยเพื่อนและการประเมินตนเอง}
+
+การประเมินโดยเพื่อน (Peer Assessment) คือกระบวนการที่ผู้เรียนประเมินคุณภาพหรือคุณค่าของงานของเพื่อนในระดับเดียวกัน~\cite{topping1998peer} เมื่อใช้ร่วมกับการประเมินตนเอง (Self-assessment) ช่วยให้ผู้เรียนพัฒนาการคิดเชิงวิพากษ์และความรับผิดชอบต่อการเรียนรู้ ผลการสัมภาษณ์ในโครงงานนิยาม Peer Review ว่าไม่ใช่เพียงเครื่องมือตัดเกรด แต่เป็นพื้นที่สะท้อนพฤติกรรมและการมีส่วนร่วม เน้นข้อมูลย้อนกลับเชิงสร้างสรรค์ (Constructive Feedback) เพื่อพัฒนาตนเอง
+
+ข้อควรระวังได้แก่ อคติจากความสนิทสนม การให้คะแนนสูงเพราะเกรงใจ หรือให้คะแนนต่ำเพราะไม่ถูกกัน ระบบจึงใช้การปกปิดตัวตนผู้ประเมิน การใช้หลายมุมมอง (ตนเอง เพื่อน ผู้สอน) และให้ผู้สอนเป็นผู้ตัดสินขั้นสุดท้าย
+
+\subsection{ระบบที่มีอยู่เดิม}
+
+\begin{itemize}
+  \item \textbf{CATME Peer Evaluation:} ประเมินสมาชิกในทีม 5 ด้าน รองรับการให้คะแนนตนเองและเพื่อน และความคิดเห็นเป็นข้อความ มีข้อมูลสรุปผล~\cite{ohland2012catme} แต่ปรับแต่งเกณฑ์ไม่ได้ และไม่มีส่วนการสะท้อนคิด
+  \item \textbf{FeedbackFruits Peer Review:} ประเมินผลงานด้วยเกณฑ์และ Rubric รองรับการรีวิวแบบไม่เปิดเผยตัวตน และมี AI Feedback Coach
+  \item \textbf{Peerceptiv Peer Assessment:} ให้คะแนนและเขียนความคิดเห็นเกี่ยวกับผลงานของเพื่อน ประเมินการมีส่วนร่วม การสื่อสาร และการทำงานร่วมกัน รองรับการประเมินแบบไม่เปิดเผยตัวตนและการรีวิวแบบ Double-blind
+\end{itemize}
+
+Collab.Reflection นำจุดเด่นของระบบเหล่านี้มาผสมกัน โดยรวมเกณฑ์ที่ปรับแต่งได้ การประเมินตนเอง การสะท้อนคิด การแจ้งเตือนรูปแบบการทำงานเป็นทีม และ AI ช่วยสรุปความคิดเห็นและแนะนำการเขียนข้อมูลย้อนกลับไว้ในระบบเดียว
+
+\section{การสะท้อนคิด}
+
+การสะท้อนคิด (Reflection) คือการทบทวนประสบการณ์เพื่อให้เกิดความเข้าใจและนำไปปรับปรุงการกระทำครั้งต่อไป Kolb~\cite{kolb1984experiential} เสนอวงจรการเรียนรู้จากประสบการณ์ 4 ขั้น ได้แก่ ประสบการณ์รูปธรรม การสังเกตและสะท้อนคิด การสร้างแนวคิดนามธรรม และการทดลองปฏิบัติ ส่วน Schön~\cite{schon1983reflective} แยกการสะท้อนคิดเป็นการสะท้อนขณะปฏิบัติ (reflection-in-action) และหลังปฏิบัติ (reflection-on-action) ระบบนี้เน้นการสะท้อนคิดหลังปฏิบัติ โดยให้นักศึกษาประเมินตนเองและเพื่อน และเขียนจุดแข็งกับสิ่งที่อยากให้ปรับเป็นรอบ ๆ ตามที่ผู้สอนกำหนด
+
+\section{เกณฑ์การประเมินแบบ CATME}
+
+โครงงานเลือกใช้เกณฑ์การประเมินสมาชิกทีมของ CATME~\cite{ohland2012catme} ซึ่งแบ่งพฤติกรรมการทำงานเป็นทีมออกเป็น 5 ด้าน และให้คะแนนสมาชิกทุกคนในทีมรวมถึงตนเองในระดับ 1--5 ดังตารางที่~\ref{tab:ch2-1}
+
+\begin{table}[htbp]
+\centering
+\caption{ด้านการประเมินตามเกณฑ์ CATME ที่ใช้ในระบบ}\label{tab:ch2-1}
+\begin{tabularx}{\textwidth}{P{0.32\textwidth}Yl}
+\hline
+\textbf{ด้านการประเมิน} & \textbf{ลักษณะพฤติกรรม} & \textbf{กลุ่ม} \\ \hline
+การมีส่วนร่วมในงาน (Contributing to the Team's Work) & งานครบ ตรงเวลา ช่วยเพื่อน & ด้านงาน \\
+การปฏิสัมพันธ์กับเพื่อน (Interacting with Teammates) & รับฟัง สื่อสารชัดเจน & ด้านทีม \\
+การดูแลให้ทีมเดินตามแผน (Keeping the Team on Track) & ติดตามงาน ให้ข้อมูลย้อนกลับ & ด้านทีม \\
+การคาดหวังคุณภาพ (Expecting Quality) & ผลักดันให้งานออกมาดี & ด้านงาน \\
+ความรู้และทักษะที่เกี่ยวข้อง (Having Relevant KSAs) & มีความรู้ที่งานต้องใช้ & ด้านงาน \\ \hline
+\end{tabularx}
+\end{table}
+
+แต่ละด้านใช้มาตราแบบมีหลักยึดเชิงพฤติกรรม (Behaviorally Anchored Rating Scale) โดยกำหนดคำอธิบายที่ระดับ 1, 3 และ 5 ส่วนระดับ 2 และ 4 เป็นค่าระหว่างกลาง ดังนี้
+
+\begin{itemize}
+  \item \textbf{ระดับ 1 ต่ำกว่าที่คาดหวัง:} งานไม่ครบ ไม่ทันกำหนด ไม่ช่วยเพื่อน
+  \item \textbf{ระดับ 3 ทำได้ตามที่คาดหวัง:} งานครบ ส่งตรงเวลา ช่วยเพื่อนเมื่อจำเป็น
+  \item \textbf{ระดับ 5 เกินกว่าที่คาดหวัง:} งานดีเกินคาด และช่วยเพื่อนที่ทำไม่ทัน
+\end{itemize}
 
 \noindent
-where $\omega$ is the frequency of the plasmon, $c$ is the speed of
-light, $\varepsilon_m$ is the dielectric constant of the metal,
-$\varepsilon_i$ is the dielectric constant of neighboring insulator,
-and $\varepsilon_\mathit{air}$ is the dielectric constant of air.
+นอกจากคะแนน 5 ด้านแล้ว แบบประเมินมีคำถามปลายเปิด 2 ข้อ คือจุดแข็งของสมาชิกและสิ่งที่อยากให้ปรับปรุง ซึ่งสนับสนุนการให้ข้อมูลย้อนกลับเชิงสร้างสรรค์ การมีคำอธิบายพฤติกรรมกำกับแต่ละระดับช่วยให้ผู้ประเมินเข้าใจเกณฑ์ตรงกัน ลดความคลุมเครือ และทำให้คะแนนรายด้านนำไปแสดงเป็นแผนภาพเรดาร์เพื่อให้นักศึกษาเห็นจุดที่ควรพัฒนาได้ นอกจากนี้ระบบถ่วงน้ำหนักคะแนนจากหลายแหล่ง (ตนเอง เพื่อน ผู้สอน) ในระยะที่ 2 ของการพัฒนา
 
-\section{About using figures in your report}
+\section{ความรู้ตามหลักสูตรซึ่งถูกนำมาใช้หรือบูรณาการในโครงงาน}
 
-% define a command that produces some filler text, the lorem ipsum.
-\newcommand{\loremipsum}{
-  \textit{Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-  minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-  aliquip ex ea commodo consequat. Duis aute irure dolor in
-  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-  culpa qui officia deserunt mollit anim id est laborum.}\par}
+\begin{itemize}
+  \item \textbf{การพัฒนาเว็บแอปพลิเคชัน:} การออกแบบส่วนติดต่อผู้ใช้ด้วย React และ TypeScript การจัดรูปแบบด้วย Tailwind CSS การเรียกใช้ REST API และการออกแบบให้ใช้งานได้บนหลายขนาดหน้าจอ
+  \item \textbf{ระบบฐานข้อมูล:} การออกแบบ ER Diagram และ Normalization การใช้ PostgreSQL เก็บข้อมูลผู้ใช้ ทีม แบบประเมิน และผลการประเมิน รวมถึงการเขียน SQL เพื่อสรุปผลบน Dashboard
+  \item \textbf{วิศวกรรมซอฟต์แวร์:} การวิเคราะห์ความต้องการจากการสัมภาษณ์ การกำหนดขอบเขตงานเป็น 3 ระยะ (P1--P3) การออกแบบ User Flow และ User Journey และการทดสอบระบบ
+  \item \textbf{การปฏิสัมพันธ์ระหว่างมนุษย์กับคอมพิวเตอร์ (HCI):} การออกแบบ UX/UI ให้อ่านง่าย เกณฑ์ชัดเจน สำหรับทั้งนักศึกษาและผู้สอน
+  \item \textbf{การเขียนโปรแกรมและโครงสร้างข้อมูล:} การพัฒนา Backend ด้วย JavaScript/\allowbreak TypeScript บน Node.js
+  \item \textbf{เครือข่ายคอมพิวเตอร์:} หลักการของ HTTP และการสื่อสารระหว่าง Client--Server
+\end{itemize}
 
-\begin{figure}
-  \centering
+\section{ความรู้นอกหลักสูตรซึ่งถูกนำมาใช้หรือบูรณาการในโครงงาน}
 
-  \fbox{
-     \parbox{.6\textwidth}{\loremipsum}
-  }
-
-  % To include an image in the figure, say myimage.pdf, you could use
-  % the following code. Look up the documentation for the package
-  % graphicx for more information.
-  % \includegraphics[width=\textwidth]{myimage}
-
-  \caption[Sample figure]{This figure is a sample containing \gls{lorem ipsum},
-  showing you how you can include figures and glossary in your report.
-  You can specify a shorter caption that will appear in the List of Figures.}
-  \label{fig:sample-figure}
-\end{figure}
-
-Using \verb.\label. and \verb.\ref. commands allows us to refer to
-figures easily. If we can refer to Figures
-\ref{fig:walrus} and \ref{fig:sample-figure} by name in the {\LaTeX}
-source code, then we will not need to update the code that refers to it
-even if the placement or ordering of the figures changes.
-
-\loremipsum\loremipsum
-
-% This code demonstrates how to get a landscape table or figure. It
-% uses the package lscape to turn everything but the page number into
-% landscape orientation. Everything should be included within an
-% \afterpage{ .... } to avoid causing a page break too early.
-\afterpage{
-  \begin{landscape}
-  \begin{table}
-    \caption{Sample landscape table}
-    \label{tab:sample-table}
-
-    \centering
-
-    \begin{tabular}{c||c|c}
-        Year & A & B \\
-        \hline\hline
-        1989 & 12 & 23 \\
-        1990 & 4 & 9 \\
-        1991 & 3 & 6 \\
-    \end{tabular}
-  \end{table}
-  \end{landscape}
-}
-
-\loremipsum\loremipsum\loremipsum
-
-\section{Overfull hbox}
-
-When the \verb.semifinal. option is passed to the \verb.cpecmu. document class,
-any line that is longer than the line width, i.e., an overfull hbox, will be
-highlighted with a black solid rule:
-\begin{center}
-\begin{minipage}{2em}
-juxtaposition
-\end{minipage}
-\end{center}
-
-\section{\ifenglish%
-\ifcpe CPE \else ISNE \fi knowledge used, applied, or integrated in this project
-\else%
-ความรู้ตามหลักสูตรซึ่งถูกนำมาใช้หรือบูรณาการในโครงงาน
-\fi
-}
-
-อธิบายถึงความรู้ และแนวทางการนำความรู้ต่างๆ ที่ได้เรียนตามหลักสูตร ซึ่งถูกนำมาใช้ในโครงงาน
-
-\section{\ifenglish%
-Extracurricular knowledge used, applied, or integrated in this project
-\else%
-ความรู้นอกหลักสูตรซึ่งถูกนำมาใช้หรือบูรณาการในโครงงาน
-\fi
-}
-
-อธิบายถึงความรู้ต่างๆ ที่เรียนรู้ด้วยตนเอง และแนวทางการนำความรู้เหล่านั้นมาใช้ในโครงงาน
+\begin{itemize}
+  \item \textbf{เครื่องมือพัฒนาส่วนหน้าเว็บสมัยใหม่:} React 19, Vite, TanStack Query สำหรับจัดการข้อมูลจากเซิร์ฟเวอร์ และ Zustand สำหรับจัดการสถานะ
+  \item \textbf{เครื่องมือพัฒนาส่วนหลังบ้าน:} Express 5 และ Drizzle ORM สำหรับเชื่อมต่อกับ PostgreSQL
+  \item \textbf{การใช้โมเดลภาษาขนาดใหญ่ (LLM):} การเรียกใช้ Qwen API เพื่อทำหน้าที่ตรวจถ้อยคำ ปรับโทนข้อความ และสรุปความคิดเห็น ตามแนวทาง Human-in-the-loop คือ AI ช่วยแจ้งเตือนและขัดเกลาถ้อยคำ ผู้ใช้เลือกเปิดหรือปิดได้ และมนุษย์เป็นผู้ตัดสินใจ รวมถึงข้อจำกัดของภาษาไทยด้านความกำกวมและการประชดประชัน ซึ่งทำให้ฟีเจอร์ตรวจจับความขัดแย้งอยู่ในระยะที่ 3
+  \item \textbf{DevOps และการทดสอบ:} การใช้ Docker และ nginx ในการติดตั้งระบบ การทดสอบหน่วยด้วย Vitest และการทดสอบแบบ End-to-End ด้วย Cypress
+  \item \textbf{การยืนยันตัวตน:} การเข้าสู่ระบบด้วยบัญชีมหาวิทยาลัย (@cmu.ac.th) และการเชื่อมต่อกับระบบกลาง Mango Canvas (วางแผนในระยะที่ 3)
+  \item \textbf{มาตรฐานทางเทคนิค:}
+  \begin{itemize}
+    \item HTTP Semantics (RFC 9110) ใช้กำหนดรูปแบบของ REST API เพื่อให้แต่ละบริการทำงานแยกจากกันได้
+    \item JSON (RFC 8259) ใช้เป็นรูปแบบข้อมูลของ Request และ Response
+    \item OpenAPI Specification ใช้กำหนดข้อตกลงของ API ระหว่าง Frontend และ Backend ให้ชัดเจนและทดสอบได้ง่ายขึ้น
+    \item SQL Standard (ISO/IEC 9075) เป็นมาตรฐานของภาษา SQL ที่ใช้กับ PostgreSQL
+    \item WCAG 2.2 เป็นแนวทางการออกแบบเว็บและแบบฟอร์มประเมินให้ทุกคนเข้าถึงได้
+  \end{itemize}
+  \item \textbf{พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA):} หลักการเก็บเท่าที่จำเป็น (ใช้ประเมินงานกลุ่มเท่านั้น) แจ้งก่อนใช้ว่าเก็บอะไร ใครเห็น และเก็บนานเท่าใด รักษาความปลอดภัยด้วยการเข้าสู่ระบบและการเข้ารหัสข้อมูล และสิทธิของเจ้าของข้อมูลในการขอดู แก้ไข และลบข้อมูล
+  \item \textbf{การสัมภาษณ์ผู้มีส่วนได้ส่วนเสียและการออกแบบเชิงมนุษย์เป็นศูนย์กลาง:} การสัมภาษณ์อาจารย์ 5 ท่าน เพื่อสรุปประเด็นที่เห็นตรงกันและต่างกัน นำมากำหนดขอบเขตฟีเจอร์
+\end{itemize}
